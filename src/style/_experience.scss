@@ -1,0 +1,28 @@
+#experience {
+  h1 {
+    margin: 64px;
+    margin-right: auto;
+    margin-left: 0;
+  }
+  h2 {
+    font-size: 3em;
+    font-weight: 1200;
+    margin: 8px;
+    width: 90%;
+    margin-top: 64px;
+    color: lighten($secondary, 0);
+  }
+  .box {
+    min-height: initial;
+  }
+}
+
+.technologies {
+  margin: 16px;
+  margin-bottom: 64px;
+  background-color: lighten($primary, 80);
+  img {
+    width: 64px;
+    margin: 8px;
+  }
+}

@@ -1,0 +1,278 @@
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: #bcff1f;
+}
+
+.full {
+  width: 100%;
+}
+
+.material-icons {
+  margin-left: 8px;
+  vertical-align: middle;
+  display: flex !important;
+}
+
+#app {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(158, 249, 255, 0.884);
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.start {
+  justify-content: flex-start;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: 1200;
+  margin: 8px;
+  width: 90%;
+}
+
+p {
+  font-size: 1.3em;
+  margin: 8px;
+  width: 90%;
+}
+
+h1,
+p {
+  color: white;
+}
+
+h3 {
+  color: rgba(209, 252, 255, 0.884);
+  margin: 0;
+  margin-left: 8px;
+}
+
+h5 {
+  color: #dbff85;
+  margin: 0;
+  margin-left: 8px;
+}
+
+.noteworthy {
+  color: white;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.box {
+  width: 800px;
+  background-color: rgba(0, 100, 107, 0.884);
+  border-radius: 16px;
+  box-shadow: 0 0 30px -6px rgba(0, 0, 0, 0.47);
+  -webkit-box-shadow: 0 0 30px -6px rgba(0, 0, 0, 0.47);
+  -moz-box-shadow: 0 0 30px -6px rgba(0, 0, 0, 0.47);
+  min-height: 500px;
+  margin: 64px;
+  margin-bottom: 0;
+  padding-bottom: 64px;
+}
+.box p,
+.box h1 {
+  width: 100%;
+}
+
+.box-content {
+  width: 600px;
+}
+
+.light {
+  background-color: rgba(0, 148, 158, 0.884);
+}
+
+.btn {
+  padding: 4px 8px;
+  color: white;
+  border-radius: 100px;
+  min-width: 100px;
+  margin: 16px 8px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.btn p {
+  text-align: center;
+  width: initial;
+}
+
+.primary {
+  background-color: rgba(0, 100, 107, 0.884);
+}
+
+.primary:hover {
+  background-color: rgba(0, 0, 0, 0.884);
+}
+
+.secondary {
+  background-color: #ff86f5;
+}
+
+.secondary:hover {
+  background-color: #ec00d8;
+}
+
+.tertiary {
+  background-color: #bcff1f;
+}
+.tertiary p {
+  color: #6f9f00;
+}
+
+.tertiary:hover {
+  background-color: #5d8500;
+}
+.tertiary:hover p {
+  color: #e2ff9f;
+}
+
+.transparent {
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.transparent:hover {
+  background-color: white;
+  border: 1px solid white;
+}
+.transparent:hover p,
+.transparent:hover span {
+  color: black;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+}
+
+.nav {
+  width: initial;
+  margin-right: 0;
+  position: fixed;
+  width: 200px;
+  top: 0;
+  left: 0;
+}
+.nav img {
+  width: 100px;
+  border-radius: 50%;
+  margin: 32px 0;
+  margin-bottom: 8px;
+}
+.nav h4 {
+  color: white;
+  margin: 24px;
+  text-transform: uppercase;
+}
+
+.nav-item {
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+  color: #ff86f5;
+  width: 150px !important;
+  text-align: left;
+  margin-left: 16px;
+}
+.nav-item span {
+  margin-right: 8px;
+}
+
+.nav-item:hover {
+  text-align: center;
+  cursor: pointer;
+  color: white;
+}
+
+.fixed-nav {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+#experience h1 {
+  margin: 64px;
+  margin-right: auto;
+  margin-left: 0;
+}
+#experience h2 {
+  font-size: 3em;
+  font-weight: 1200;
+  margin: 8px;
+  width: 90%;
+  margin-top: 64px;
+  color: #ff86f5;
+}
+#experience .box {
+  min-height: initial;
+}
+
+.technologies {
+  margin: 16px;
+  margin-bottom: 64px;
+  background-color: rgba(255, 255, 255, 0.884);
+}
+.technologies img {
+  width: 64px;
+  margin: 8px;
+}
+
+.project {
+  width: 400px;
+  height: 400px;
+  background: #303030;
+  border-radius: 16px;
+  min-height: initial;
+  margin-left: 8px;
+  margin-right: 0;
+  overflow: hidden;
+}
+.project img {
+  height: 250px;
+  object-fit: cover;
+  padding: 0;
+  margin: 0;
+}
+.project p {
+  width: initial;
+  text-align: center;
+}
+.project .project-title {
+  color: #bcff1f !important;
+}
+.project .project-body {
+  height: 64px;
+}
+.project .project-bar {
+  margin-right: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
