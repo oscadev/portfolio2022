@@ -6,28 +6,33 @@
 }
 
 .project {
-  width: 400px;
+  width: 320px;
   height: 400px;
-  background: rgb(48, 48, 48);
+  background: $primary;
   border-radius: $radius;
   min-height: initial;
   margin-left: 8px;
   margin-right: 0;
   overflow: hidden;
+  padding-bottom: 0;
 
   img {
     // width: 400px;
-    height: 250px;
+    width: 320px;
+    height: 200px;
     object-fit: cover;
     padding: 0;
     margin: 0;
+    overflow: hidden;
   }
   p {
     width: initial;
+    padding: 0 8px;
     text-align: center;
+    font-size: 1em;
   }
   .project-title {
-    color: $tertiary !important;
+    color: lighten($tertiary, 15) !important;
   }
   .project-body {
     height: 64px;
@@ -35,5 +40,7 @@
 
   .project-bar {
     margin-right: auto;
+
+    // height: 64px;
   }
 }

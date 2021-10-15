@@ -1,0 +1,25 @@
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer {
+  margin-top: 64px;
+  width: 100vw;
+  background-color: darken($tertiary, 30);
+  height: 64px;
+  //   position: absolute;
+  bottom: 0;
+
+  i {
+    width: 32px;
+    margin-right: 64px;
+    font-size: 64px;
+  }
+  i,
+  span {
+    color: white;
+  }
+}

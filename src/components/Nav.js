@@ -6,11 +6,7 @@ export const Nav = () => {
   return (
     <nav className="box nav flex start">
       <img src={me} alt="" />
-      <h4>
-        Web Developer
-        <br />
-        at NIS America
-      </h4>
+      <h4>Web Developer</h4>
 
       <Link to="/" className="flex row start">
         <p className="flex row start nav-item">
@@ -31,12 +27,12 @@ export const Nav = () => {
           Projects
         </p>
       </Link>
-      <Link to="/contact" className="flex row start">
+      {/* <Link to="/contact" className="flex row start">
         <p className="flex row start nav-item">
           <span className="material-icons">email</span>
           Contact
         </p>
-      </Link>
+      </Link> */}
     </nav>
   );
 };

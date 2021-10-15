@@ -11,6 +11,7 @@
     width: 90%;
     margin-top: 64px;
     color: lighten($secondary, 0);
+    margin-left: 0;
   }
   .box {
     min-height: initial;
@@ -20,9 +21,62 @@
 .technologies {
   margin: 16px;
   margin-bottom: 64px;
-  background-color: lighten($primary, 80);
-  img {
+  // background-color: lighten($primary, 80);
+  // border: solid rgb(99, 99, 99) 1px;
+  justify-content: flex-start;
+  margin-left: 0;
+  img,
+  i {
     width: 64px;
-    margin: 8px;
+    margin: 16px;
+    margin-left: 0;
+    font-size: 64px;
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #experience {
+    h1 {
+      margin: 32px;
+      margin-right: auto;
+      margin-left: 0;
+    }
+    h2 {
+      font-size: 2em;
+      font-weight: 1200;
+      margin: 8px;
+      width: 90%;
+      margin-top: 32px;
+      color: lighten($secondary, 0);
+      margin-left: 0;
+    }
+
+    .box {
+      min-height: initial;
+    }
+    p {
+      text-align: left;
+    }
+    h5 {
+      text-align: center;
+    }
+  }
+
+  .technologies {
+    margin: 16px;
+    margin-bottom: 32px;
+    // background-color: lighten($primary, 80);
+    // border: solid rgb(99, 99, 99) 1px;
+    justify-content: center;
+    margin-left: 0;
+    img,
+    i {
+      width: 32px;
+      margin: 8px;
+      margin-left: 0;
+      font-size: 48px;
+      color: white;
+    }
   }
 }

@@ -7,7 +7,10 @@ export const HomePage = () => {
       <div className="box flex">
         <div className="box-content">
           <h1>I'm Oscar Anguiano</h1>
-          <p>Welcome to my portfolio page.</p>
+          <p>
+            Web Developer at NIS America. <br />
+            Welcome to my portfolio page.
+          </p>
           <div className="flex row  start full">
             <Btn icon="description" title={"My Resume"} variant="secondary" />
             <Btn icon="email" title={"Hire Me"} />
