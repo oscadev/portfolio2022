@@ -6,8 +6,8 @@
 }
 
 .project {
-  width: 320px;
-  height: 400px;
+  width: 320px * 1.2;
+  height: 400px * 1.2;
   background: $primary;
   border-radius: $radius;
   min-height: initial;
@@ -15,11 +15,14 @@
   margin-right: 0;
   overflow: hidden;
   padding-bottom: 0;
+  h2 {
+    font-weight: 200;
+  }
 
   img {
     // width: 400px;
-    width: 320px;
-    height: 200px;
+    width: 320px * 1.2;
+    height: 200px * 1.2;
     object-fit: cover;
     padding: 0;
     margin: 0;
@@ -42,5 +45,58 @@
     margin-right: auto;
 
     // height: 64px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #projects {
+    //   margin-left: 180px;
+    // width: 100vw;
+    // max-width: 1000px;
+    //   background-color: yellow;
+  }
+
+  .project {
+    width: 320px;
+    height: 400px;
+    background: $primary;
+    border-radius: $radius;
+    min-height: initial;
+    margin-left: 8px;
+    margin-right: 0;
+    overflow: hidden;
+    padding-bottom: 0;
+    h2 {
+      font-weight: 200;
+      font-size: 1.3em;
+    }
+
+    img {
+      // width: 400px;
+      width: 320px;
+      height: 200px;
+      object-fit: cover;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+    p {
+      width: initial;
+      padding: 0 8px;
+      text-align: center;
+      font-size: 1em;
+    }
+    .project-title {
+      color: lighten($tertiary, 15) !important;
+    }
+    .project-body {
+      height: 64px;
+    }
+
+    .project-bar {
+      margin-right: auto;
+
+      // height: 64px;
+    }
   }
 }

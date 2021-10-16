@@ -84,8 +84,8 @@ const data = [
     title: "This Portfolio",
     body: <>Made this portfolio with React and Sass.</>,
     img: imgPortfolio,
-    code: "github.com",
-    live: "https://nisamerica.com/poison-control",
+    code: "https://github.com/oscadev/portfolio2022/tree/master/src",
+    // live: "https://nisamerica.com/poison-control",
   },
   {
     title: "Poison Control",
@@ -119,7 +119,7 @@ const data = [
     body: <>Recreated the PS4 menu with React in 2019 for fun.</>,
     img: imgPS4,
     code: "https://github.com/oscadev/psm/tree/master/src",
-    live: "https://nisamerica.com/poison-control",
+    live: "https://devosc.club/psmenu/",
   },
   {
     title: "React Native Freelance",

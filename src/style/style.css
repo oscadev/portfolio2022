@@ -1,3 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100;400;700&family=Orbitron:wght@400;700&display=swap");
+h1,
+h2 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: bold;
+}
+
+p,
+h3,
+h4,
+h5,
+a {
+  font-family: "Exo 2", sans-serif;
+}
+
 .show-on-small {
   display: none;
 }
@@ -44,7 +59,7 @@ code {
 }
 
 #modal-content {
-  background-color: black;
+  background-color: #000201;
   padding: 32px 0;
   border-radius: 16px;
   box-shadow: 0 0 30px -6px rgba(0, 0, 0, 0.47);
@@ -88,7 +103,7 @@ code {
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 3.5em;
   font-weight: 1200;
   margin: 8px 0;
   width: 90%;
@@ -155,7 +170,7 @@ h5 {
 }
 
 .btn {
-  padding: 4px 8px;
+  padding: 4px 16px;
   color: white;
   border-radius: 100px;
   min-width: 100px;
@@ -167,6 +182,8 @@ h5 {
   text-align: center;
   width: initial;
   font-size: 16px;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 100;
 }
 
 .primary {
@@ -178,11 +195,17 @@ h5 {
 }
 
 .secondary {
-  background-color: #00a76f;
+  background-color: #00ce89;
+}
+.secondary p {
+  color: #e8fff7;
 }
 
 .secondary:hover {
-  background-color: #000e09;
+  background-color: #35ffbb;
+}
+.secondary:hover p {
+  color: #004f34;
 }
 
 .tertiary {
@@ -232,6 +255,10 @@ h5 {
 }
 
 @media only screen and (max-width: 1000px) {
+  .start {
+    justify-content: center;
+  }
+
   .show-on-small {
     display: flex;
   }
@@ -287,10 +314,11 @@ h5 {
     text-align: center;
     width: initial;
     font-size: 12px;
+    font-weight: bold;
   }
 
   #modal-content {
-    background-color: black;
+    background-color: #000201;
     padding: 32px 0;
     border-radius: 4px;
     box-shadow: 0 0 30px -6px rgba(0, 0, 0, 0.47);
@@ -337,7 +365,7 @@ h5 {
   text-align: center;
   cursor: pointer;
   transition: 0.5s;
-  color: #00a76f;
+  color: #00ce89;
   width: 150px !important;
   text-align: left;
   margin-left: 16px;
@@ -388,7 +416,7 @@ h5 {
   .nav-item {
     cursor: pointer;
     transition: 0.5s;
-    color: #00a76f;
+    color: #00ce89;
     width: initial !important;
     text-align: center;
     margin-left: 4px;
@@ -420,7 +448,7 @@ h5 {
   margin: 8px;
   width: 90%;
   margin-top: 64px;
-  color: #00a76f;
+  color: #00ce89;
   margin-left: 0;
 }
 #experience .box {
@@ -454,7 +482,7 @@ h5 {
     margin: 8px;
     width: 90%;
     margin-top: 32px;
-    color: #00a76f;
+    color: #00ce89;
     margin-left: 0;
   }
   #experience .box {
@@ -483,8 +511,8 @@ h5 {
   }
 }
 .project {
-  width: 320px;
-  height: 400px;
+  width: 384px;
+  height: 480px;
   background: #05172b;
   border-radius: 16px;
   min-height: initial;
@@ -493,9 +521,12 @@ h5 {
   overflow: hidden;
   padding-bottom: 0;
 }
+.project h2 {
+  font-weight: 200;
+}
 .project img {
-  width: 320px;
-  height: 200px;
+  width: 384px;
+  height: 240px;
   object-fit: cover;
   padding: 0;
   margin: 0;
@@ -517,6 +548,46 @@ h5 {
   margin-right: auto;
 }
 
+@media only screen and (max-width: 1000px) {
+  .project {
+    width: 320px;
+    height: 400px;
+    background: #05172b;
+    border-radius: 16px;
+    min-height: initial;
+    margin-left: 8px;
+    margin-right: 0;
+    overflow: hidden;
+    padding-bottom: 0;
+  }
+  .project h2 {
+    font-weight: 200;
+    font-size: 1.3em;
+  }
+  .project img {
+    width: 320px;
+    height: 200px;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  .project p {
+    width: initial;
+    padding: 0 8px;
+    text-align: center;
+    font-size: 1em;
+  }
+  .project .project-title {
+    color: #9499ec !important;
+  }
+  .project .project-body {
+    height: 64px;
+  }
+  .project .project-bar {
+    margin-right: auto;
+  }
+}
 #root {
   min-height: 100vh;
   display: flex;

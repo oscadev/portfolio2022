@@ -12,8 +12,17 @@ export const HomePage = () => {
             Welcome to my portfolio page.
           </p>
           <div className="flex row  start full">
-            <Btn icon="description" title={"My Resume"} variant="secondary" />
-            <Btn icon="email" title={"Hire Me"} />
+            <Btn
+              icon="description"
+              title={"My Resume"}
+              variant="secondary"
+              func={() => alert("Almost done!")}
+            />
+            <Btn
+              icon="email"
+              title={"Hire Me"}
+              func={() => alert("Most buttons work. Just these two dont yet!")}
+            />
           </div>
         </div>
       </div>

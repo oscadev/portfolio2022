@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100;400;700&family=Orbitron:wght@400;700&display=swap");
 // $primary: rgba(0, 100, 107, 0.884);
 // $secondary: rgb(255, 134, 245);
 // $tertiary: rgb(188, 255, 31);
@@ -17,7 +18,7 @@
 // $bg: lighten($primary, 60);
 
 $primary: rgb(5, 23, 43);
-$secondary: rgb(0, 167, 111);
+$secondary: rgb(0, 206, 137);
 $tertiary: rgb(83, 92, 224);
 $dark: rgb(34, 34, 34);
 $bg: lighten($primary, 60);
@@ -27,6 +28,21 @@ $radius2: 100px;
 
 $transition: 0.5s;
 
+$font1: "Orbitron", sans-serif;
+$font2: "Exo 2", sans-serif;
+
+h1,
+h2 {
+  font-family: $font1;
+  font-weight: bold;
+}
+p,
+h3,
+h4,
+h5,
+a {
+  font-family: $font2;
+}
 .show-on-small {
   display: none;
 }
@@ -127,7 +143,7 @@ code {
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 3.5em;
   font-weight: 1200;
   margin: 8px 0;
   width: 90%;
@@ -195,7 +211,7 @@ h5 {
 }
 
 .btn {
-  padding: 4px 8px;
+  padding: 4px 16px;
   color: white;
   border-radius: $radius2;
   min-width: 100px;
@@ -206,6 +222,8 @@ h5 {
     text-align: center;
     width: initial;
     font-size: 16px;
+    font-family: $font1;
+    font-weight: 100;
   }
 }
 
@@ -218,9 +236,15 @@ h5 {
 
 .secondary {
   background-color: $secondary;
+  p {
+    color: lighten($secondary, 55);
+  }
 }
 .secondary:hover {
-  background-color: darken($secondary, 30);
+  background-color: lighten($secondary, 20);
+  p {
+    color: darken($secondary, 25);
+  }
 }
 
 .tertiary {
@@ -278,6 +302,9 @@ h5 {
 }
 
 @media only screen and (max-width: 1000px) {
+  .start {
+    justify-content: center;
+  }
   .show-on-small {
     display: flex;
   }
@@ -333,6 +360,7 @@ h5 {
       text-align: center;
       width: initial;
       font-size: 12px;
+      font-weight: bold;
     }
   }
 
