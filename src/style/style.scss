@@ -26,7 +26,7 @@ $bg: lighten($primary, 60);
 $radius: 16px;
 $radius2: 100px;
 
-$transition: 0.5s;
+$transition: 0.2s;
 
 $font1: "Orbitron", sans-serif;
 $font2: "Exo 2", sans-serif;
@@ -242,20 +242,23 @@ h5 {
 }
 .secondary:hover {
   background-color: lighten($secondary, 20);
-  p {
+  p,
+  span {
     color: darken($secondary, 25);
   }
 }
 
 .tertiary {
   background-color: $tertiary;
-  p {
+  p,
+  span {
     color: lighten($tertiary, 55);
   }
 }
 .tertiary:hover {
   background-color: lighten($tertiary, 20);
-  p {
+  p,
+  span {
     color: darken($tertiary, 25);
   }
 }

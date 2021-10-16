@@ -176,7 +176,7 @@ h5 {
   min-width: 100px;
   margin: 16px 8px;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 .btn p {
   text-align: center;
@@ -204,21 +204,24 @@ h5 {
 .secondary:hover {
   background-color: #35ffbb;
 }
-.secondary:hover p {
+.secondary:hover p,
+.secondary:hover span {
   color: #004f34;
 }
 
 .tertiary {
   background-color: #535ce0;
 }
-.tertiary p {
+.tertiary p,
+.tertiary span {
   color: white;
 }
 
 .tertiary:hover {
   background-color: #a9aef0;
 }
-.tertiary:hover p {
+.tertiary:hover p,
+.tertiary:hover span {
   color: #1b2398;
 }
 
@@ -234,7 +237,7 @@ h5 {
 .transparent:hover p,
 .transparent:hover span {
   color: black;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 .btn:hover {
@@ -308,7 +311,7 @@ h5 {
     min-width: 100px;
     margin: 16px;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.2s;
   }
   .btn p {
     text-align: center;
@@ -364,7 +367,7 @@ h5 {
 .nav-item {
   text-align: center;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.2s;
   color: #00ce89;
   width: 150px !important;
   text-align: left;
@@ -415,7 +418,7 @@ h5 {
 
   .nav-item {
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.2s;
     color: #00ce89;
     width: initial !important;
     text-align: center;
