@@ -59,7 +59,7 @@ code {
 }
 
 #modal-content {
-  background-color: #000201;
+  background-color: #181e82;
   padding: 32px 0;
   border-radius: 16px;
   box-shadow: 0 0 30px -6px rgba(0, 0, 0, 0.47);
@@ -255,6 +255,27 @@ h5 {
   opacity: 1;
   overflow: hidden;
   background-image: url(https://images.unsplash.com/photo-1610795555359-05c885d4649e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2340&q=80);
+}
+
+#contact {
+  height: 90%;
+  min-height: 500px;
+  background-color: #009b67;
+  border-radius: 5px;
+}
+#contact input,
+#contact textarea {
+  margin: 16px;
+  background-color: #35ffbb;
+  border: #00ce89 solid 1px;
+  width: 300px;
+  padding: 8px;
+  color: #003523;
+  font-size: 1.3em;
+  border-radius: 5px;
+}
+#contact input {
+  height: 32px;
 }
 
 @media only screen and (max-width: 1000px) {

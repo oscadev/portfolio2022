@@ -21,9 +21,11 @@ function App() {
 
         <div
           id="modal"
-          className="flex"
+          className={`flex`}
           onClick={() => setModal(false)}
-          style={{ display: modal ? null : "none" }}
+          style={{
+            display: modal ? null : "none",
+          }}
         >
           <div id="close-modal" onClick={() => setModal(false)}>
             close
@@ -38,7 +40,7 @@ function App() {
         </div>
         <Switch>
           <Route path="/" exact>
-            <HomePage />
+            <HomePage modal={modal} setModal={setModal} />
           </Route>
           <Route path="/experience">
             <ExperiencePage />
