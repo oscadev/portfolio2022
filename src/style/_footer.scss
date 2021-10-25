@@ -18,8 +18,10 @@ footer {
     margin-right: 64px;
     font-size: 64px;
   }
-  i,
-  span {
+  .link {
     color: white;
+  }
+  .link:hover {
+    color: lighten($tertiary, 20);
   }
 }

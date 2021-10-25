@@ -6,6 +6,7 @@ import imgRedeem from "../assets/img/projects/redeem.png";
 import imgPortfolio from "../assets/img/projects/portfolio.png";
 import imgPrinny from "../assets/img/projects/prinny.png";
 import imgPS4 from "../assets/img/projects/ps4.png";
+import imgNPM from "../assets/img/projects/npm.png";
 import imgGanza from "../assets/img/projects/ganza.jpg";
 import { Btn } from "../components/Btn";
 
@@ -136,8 +137,13 @@ const data = [
   },
   {
     title: "NPM Package",
-    body: <>Website for the video game "Poison Control" made with React.</>,
-    img: imgPortfolio,
+    body: (
+      <>
+        NPM package created to import img folder into JS file, including import
+        statements and a useful array of img objects.
+      </>
+    ),
+    img: imgNPM,
     code: "https://github.com/oscadev/react-import-folder",
     live: null,
     video: "https://node.devosc.club/assets/portfolio/npm-package-video.mov",

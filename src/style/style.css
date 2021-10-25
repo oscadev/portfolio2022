@@ -506,10 +506,10 @@ h5 {
   }
   .technologies img,
 .technologies i {
-    width: 32px;
+    width: 42px;
     margin: 8px;
     margin-left: 0;
-    font-size: 48px;
+    font-size: 42px;
     color: white;
   }
 }
@@ -531,6 +531,7 @@ h5 {
   width: 384px;
   height: 240px;
   object-fit: cover;
+  object-position: top;
   padding: 0;
   margin: 0;
   overflow: hidden;
@@ -610,9 +611,11 @@ footer i {
   margin-right: 64px;
   font-size: 64px;
 }
-footer i,
-footer span {
+footer .link {
   color: white;
+}
+footer .link:hover {
+  color: #a9aef0;
 }
 
 /*# sourceMappingURL=style.css.map */

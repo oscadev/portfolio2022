@@ -2,7 +2,7 @@ import React from "react";
 import { Btn } from "./components/Btn";
 import "./style/style.css";
 import "material-design-icons/iconfont/material-icons.css";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, useLocation } from "react-router-dom";
 import { HomePage } from "./pages/HomePage";
 import { Nav } from "./components/Nav";
 import { ExperiencePage } from "./pages/ExperiencePage";
@@ -11,8 +11,14 @@ import { Footer } from "./components/Footer";
 
 function App() {
   const [modal, setModal] = React.useState(false);
+  const location = useLocation();
+
+  React.useEffect(() => {
+    //scroll to top when route changes
+    window.scrollTo(0, 0);
+  }, [location]);
   return (
-    <BrowserRouter basename="/">
+    <>
       <div className="bg-pattern"></div>
       <div className="flex row start" id="app" style={{ flexWrap: "nowrap" }}>
         <div className="fixed-nav">
@@ -51,7 +57,7 @@ function App() {
         </Switch>
       </div>
       <Footer />
-    </BrowserRouter>
+    </>
   );
 }
 

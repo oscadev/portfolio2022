@@ -27,12 +27,6 @@ export const Nav = () => {
           Projects
         </p>
       </Link>
-      {/* <Link to="/contact" className="flex row start">
-        <p className="flex row start nav-item">
-          <span className="material-icons">email</span>
-          Contact
-        </p>
-      </Link> */}
     </nav>
   );
 };
