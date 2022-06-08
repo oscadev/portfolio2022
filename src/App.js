@@ -10,6 +10,8 @@ import { ProjectsPage } from "./pages/ProjectsPage";
 import { Footer } from "./components/Footer";
 import ScrollSmoother from "gsap/ScrollSmoother";
 import ReactPlayer from "react-player";
+import binaryVid from "./assets/img/binary.mp4";
+import gsap from "gsap";
 
 function App() {
   const [modal, setModal] = React.useState(false);
@@ -26,64 +28,83 @@ function App() {
     });
   }, [location]);
 
-  React.useEffect(() => {}, []);
+  React.useEffect(() => {
+    gsap.fromTo(
+      "#fixed-nav",
+      { x: 64, y: 0 },
+      {
+        y: "10vh",
+        x: 0,
+        scrollTrigger: {
+          trigger: "body",
+          scrub: true,
+          // start: "top top",
+          // end: "bottom bottom",
+          pin: "#fixed-nav",
+          pinType: "fixed",
+        },
+      }
+    );
+  }, []);
   return (
     <>
+      <div
+        id="modal"
+        className={`flex`}
+        onClick={() => setModal(false)}
+        style={{
+          display: modal ? null : "none",
+        }}
+      >
+        <div id="close-modal" onClick={() => setModal(false)}>
+          close
+        </div>
+        <div
+          id="modal-content"
+          className="flex"
+          onClick={(e) => e.stopPropagation()}
+        >
+          {modal}
+        </div>
+      </div>
       <div className="bg-pattern">
         <ReactPlayer
-          url="https://www.youtube.com/watch?v=2LMqOdCHQWw"
+          url={binaryVid}
           playsinline
           volume={0}
           muted={true}
           playing
+          loop
           width={"100vw"}
           height={"100vh"}
           style={{ objectFit: "cover" }}
         />
       </div>
+      <div id="fixed-nav">
+        <Nav />
+      </div>
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <div
-            className="flex row start"
-            id="app"
-            style={{ flexWrap: "nowrap" }}
-          >
-            <div className="fixed-nav">
-              <Nav />
-            </div>
-
+          <div id="center">
             <div
-              id="modal"
-              className={`flex`}
-              onClick={() => setModal(false)}
-              style={{
-                display: modal ? null : "none",
-              }}
+              className="flex row start"
+              id="app"
+              style={{ flexWrap: "nowrap" }}
             >
-              <div id="close-modal" onClick={() => setModal(false)}>
-                close
-              </div>
-              <div
-                id="modal-content"
-                className="flex"
-                onClick={(e) => e.stopPropagation()}
-              >
-                {modal}
-              </div>
+              <Switch>
+                <Route path="/" exact>
+                  <HomePage modal={modal} setModal={setModal} />
+                </Route>
+                <Route path="/experience">
+                  <ExperiencePage />
+                </Route>
+                <Route path="/projects">
+                  <ProjectsPage modal={modal} setModal={setModal} />
+                </Route>
+              </Switch>
             </div>
-            <Switch>
-              <Route path="/" exact>
-                <HomePage modal={modal} setModal={setModal} />
-              </Route>
-              <Route path="/experience">
-                <ExperiencePage />
-              </Route>
-              <Route path="/projects">
-                <ProjectsPage modal={modal} setModal={setModal} />
-              </Route>
-            </Switch>
+            <Footer />
           </div>
-          <Footer />
         </div>
       </div>
     </>

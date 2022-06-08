@@ -1,8 +1,88 @@
+import gsap from "gsap";
 import React from "react";
+import { ServerStyleSheet } from "styled-components";
 import { Job } from "../components/Experience/Job";
 import { TechStack } from "../components/Experience/TechStack";
 
 export const ExperiencePage = () => {
+  const [showArrow, setShowArrow] = React.useState(true);
+  const techRef = React.useRef(null);
+  const jobsRef = React.useRef(null);
+  const eduRef = React.useRef(null);
+  React.useEffect(() => {
+    const buffer = 64;
+    gsap.fromTo(
+      techRef.current,
+      { x: 64, y: -300 },
+      {
+        y: 0,
+        x: 0,
+        scrollTrigger: {
+          trigger: "body",
+          scrub: true,
+          start: "0",
+          end: "300px",
+          // start: "top top",
+          // end: "bottom bottom",
+          // pin: techRef.current,
+          // pinType: "fixed",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      jobsRef.current,
+      { x: 56, y: -1850 },
+      {
+        y: 0,
+        x: 0,
+        scrollTrigger: {
+          trigger: "body",
+          scrub: true,
+          start: "0",
+          end: "300px",
+          onEnterBack: () => setShowArrow(true),
+
+          // start: "top top",
+          // end: "bottom bottom",
+          // pin: jobsRef.current,
+          // pinType: "fixed",
+        },
+        onComplete: () => setShowArrow(false),
+        onStart: () => setShowArrow(true),
+      }
+    );
+    console.log(
+      -document.querySelector("#education").getBoundingClientRect().y
+    );
+    gsap.fromTo(
+      eduRef.current,
+      {
+        x: -(buffer * 2),
+        y:
+          -document.querySelector("#education").getBoundingClientRect().y +
+          buffer * 10,
+      },
+      {
+        y: 0,
+        x: 0,
+        scrollTrigger: {
+          trigger: "body",
+          scrub: true,
+          start: "0",
+          end: "300px",
+          onEnterBack: () => setShowArrow(true),
+
+          // start: "top top",
+          // end: "bottom bottom",
+          // pin: eduRef.current,
+          // pinType: "fixed",
+        },
+        onComplete: () => setShowArrow(false),
+        onStart: () => setShowArrow(true),
+      }
+    );
+  }, []);
   return (
     <div id="experience" className="flex">
       <div className="box light flex">
@@ -11,14 +91,14 @@ export const ExperiencePage = () => {
           <p>My experience, technologies, and stuff about me.</p>
         </div>
       </div>
-      <Technologies />
-      <Work />
-      <Education />
+      <Technologies theRef={techRef} />
+      <Work theRef={jobsRef} showArrow={showArrow} />
+      <Education theRef={eduRef} />
     </div>
   );
 };
 
-const Technologies = () => {
+const Technologies = ({ theRef }) => {
   const techData = [
     {
       title: "Front End",
@@ -70,7 +150,7 @@ const Technologies = () => {
     },
   ];
   return (
-    <div className="box flex">
+    <div className="box flex" id="technologies" ref={theRef}>
       <div className="box-content">
         <h1>Tech Stacks</h1>
         {techData.map((tech, techIndex) => (
@@ -86,7 +166,7 @@ const Technologies = () => {
   );
 };
 
-const Work = () => {
+const Work = ({ theRef, showArrow }) => {
   const jobs = [
     {
       company: "Reform Collective",
@@ -153,26 +233,36 @@ const Work = () => {
     },
   ];
   return (
-    <div className="box flex">
+    <div className="box flex" id="jobs" ref={theRef}>
       <div className="box-content">
         <h1>Work Experience</h1>
-        {jobs.map((job, jobIndex) => (
-          <Job
-            key={"job" + jobIndex}
-            company={job.company}
-            date={job.date}
-            body={job.body}
-            noteworthy={job.noteworthy}
-          />
-        ))}
+        {showArrow
+          ? jobs.map((job, jobIndex) => (
+              <Job
+                key={"job-psuedo" + jobIndex}
+                company={job.company}
+                date={job.date}
+                body={job.body}
+                noteworthy={job.noteworthy}
+              />
+            ))
+          : jobs.map((job, jobIndex) => (
+              <Job
+                key={"job" + jobIndex}
+                company={job.company}
+                date={job.date}
+                body={job.body}
+                noteworthy={job.noteworthy}
+              />
+            ))}
       </div>
     </div>
   );
 };
 
-const Education = () => {
+const Education = ({ theRef }) => {
   return (
-    <div className="box flex">
+    <div className="box flex" ref={theRef} id={"education"}>
       <div className="box-content">
         <h1>Education</h1>
 

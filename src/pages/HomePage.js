@@ -8,7 +8,7 @@ export const HomePage = ({ setModal }) => {
         <div className="box-content">
           <h1>I'm Oscar Anguiano</h1>
           <p>
-            Web Developer at NIS America. <br />
+            Web Developer at Reform Collective. <br />
             Welcome to my portfolio page.
           </p>
           <div className="flex row  start full">

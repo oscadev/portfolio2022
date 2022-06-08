@@ -87,6 +87,7 @@ export const Job = ({ company, date, body, noteworthy }) => {
           },
         }
       );
+    return () => tl.kill;
   }, []);
   return (
     <Wrapper ref={wrapperRef} data-speed=".7">

@@ -1,8 +1,11 @@
 #projects {
-  //   margin-left: 180px;
+  margin-left: 250px;
   // width: 100vw;
   // max-width: 1000px;
   //   background-color: yellow;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .project {
@@ -11,8 +14,8 @@
   background: $primary;
   border-radius: $radius;
   min-height: initial;
-  margin-left: 8px;
-  margin-right: 0;
+  // margin-left: 8px;
+  margin: 0;
   overflow: hidden;
   padding-bottom: 0;
   h2 {

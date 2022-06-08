@@ -12,7 +12,7 @@ import { Btn } from "../components/Btn";
 
 export const ProjectsPage = ({ setModal }) => {
   return (
-    <div id="projects" className="flex row">
+    <div id="projects">
       {data.map((e, i) => (
         <Project
           key={i}

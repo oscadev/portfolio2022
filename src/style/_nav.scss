@@ -1,11 +1,11 @@
 .nav {
-  width: initial;
+  min-height: initial;
   margin-right: 0;
-  position: fixed;
-  width: 200px;
+  width: 230px;
   top: 0;
   left: 0;
   z-index: 5;
+
   img {
     width: 100px;
     border-radius: 50%;
@@ -24,7 +24,7 @@
   cursor: pointer;
   transition: $transition;
   color: $secondary;
-  width: 150px !important;
+  width: 160px !important;
   text-align: left;
   margin-left: 16px;
   span {
@@ -38,11 +38,15 @@
   color: white;
 }
 
-.fixed-nav {
+#fixed-nav {
   width: 300px;
   // height: 100vh;
   // background-color: pink;
   flex-shrink: 0;
+  position: fixed;
+  top: 0;
+  left: 64px;
+  z-index: 2;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -94,7 +98,7 @@
     color: white;
   }
 
-  .fixed-nav {
+  #fixed-nav {
     width: 0;
     // height: 100vh;
     // background-color: pink;

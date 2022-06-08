@@ -21,7 +21,7 @@ export const Footer = () => {
           style={{ margin: "0 16px" }}
           className="flex row link"
         >
-          <i class="devicon-linkedin-plain-wordmark"></i>
+          <i className="devicon-linkedin-plain-wordmark"></i>
         </a>
       </div>
     </footer>
